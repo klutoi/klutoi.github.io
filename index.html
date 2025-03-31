@@ -1,0 +1,514 @@
+<html class="" lang="ru"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_3PCPlZ"></div><link type="text/css" id="dark-mode" rel="stylesheet" href=""><style type="text/css" id="dark-mode-сustom-style"></style><style type="text/css" id="dark-mode-theme-changer-style"></style><head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор сайтов</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .container {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(147, 112, 219, 0.3),
+                        inset 0 0 15px rgba(147, 112, 219, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            width: 100%;
+            max-width: 800px;
+        }
+        .input-group {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+            margin-bottom: 30px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+        }
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: #b19cd9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        .preview {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            border-radius: 10px;
+            background: rgba(20, 20, 35, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .preview:hover {
+            box-shadow: 0 0 15px rgba(147, 112, 219, 0.4);
+        }
+        input[type="file"] {
+            background: rgba(26, 26, 46, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="file"]::-webkit-file-upload-button {
+            background: #9370DB;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        input[type="file"]::-webkit-file-upload-button:hover {
+            background: #8A2BE2;
+        }
+        button {
+            background: linear-gradient(45deg, #9370DB, #8A2BE2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(147, 112, 219, 0.3);
+        }
+        button:hover {
+            background: linear-gradient(45deg, #8A2BE2, #9370DB);
+            box-shadow: 0 0 20px rgba(147, 112, 219, 0.5);
+            transform: translateY(-2px);
+        }
+        #imagePreview {
+            max-width: 100%;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(147, 112, 219, 0.3);
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+            background: rgba(147, 112, 219, 0.1);
+        }
+        audio::-webkit-media-controls-panel {
+            background: rgba(147, 112, 219, 0.2);
+        }
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #fff;
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 15px rgba(147, 112, 219, 0.3); }
+            50% { box-shadow: 0 0 25px rgba(147, 112, 219, 0.5); }
+            100% { box-shadow: 0 0 15px rgba(147, 112, 219, 0.3); }
+        }
+        .container {
+            animation: glow 3s infinite;
+        }
+
+        .header-links {
+            display: flex;
+            justify-content: center;
+            margin: -20px 0 30px 0;
+        }
+
+        .telegram-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #9370DB, #8A2BE2);
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 0 15px rgba(147, 112, 219, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .telegram-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(147, 112, 219, 0.6);
+        }
+
+        .telegram-link svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .telegram-link span {
+            font-size: 1.1em;
+        }
+
+        @keyframes highlight {
+            0% { box-shadow: 0 0 15px rgba(147, 112, 219, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(147, 112, 219, 0.8); }
+            100% { box-shadow: 0 0 15px rgba(147, 112, 219, 0.4); }
+        }
+
+        .telegram-link {
+            animation: highlight 2s infinite;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(26, 26, 46, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 0 30px rgba(147, 112, 219, 0.5),
+                        inset 0 0 20px rgba(147, 112, 219, 0.3);
+            animation: modalSlide 0.5s ease;
+            z-index: 1001;
+        }
+
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .channel-button {
+            background: linear-gradient(45deg, #9370DB, #8A2BE2);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(147, 112, 219, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .channel-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(147, 112, 219, 0.5);
+        }
+
+        .modal-title {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes modalSlide {
+            from {
+                transform: translate(-50%, -60%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            button {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+            .telegram-link {
+                padding: 8px 16px;
+            }
+            .telegram-link svg {
+                width: 20px;
+                height: 20px;
+            }
+            .telegram-link span {
+                font-size: 1em;
+            }
+        }
+    </style>
+<style>
+@keyframes slide-in-one-tap {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.trust-hide-gracefully {
+  opacity: 0;
+}
+
+.trust-wallet-one-tap .hidden {
+    display: none;
+  }
+
+.trust-wallet-one-tap .semibold {
+    font-weight: 500;
+  }
+
+.trust-wallet-one-tap .binance-plex {
+    font-family: 'Binance';
+  }
+
+.trust-wallet-one-tap .rounded-full {
+    border-radius: 50%;
+  }
+
+.trust-wallet-one-tap .flex {
+    display: flex;
+  }
+
+.trust-wallet-one-tap .flex-col {
+    flex-direction: column;
+  }
+
+.trust-wallet-one-tap .items-center {
+    align-items: center;
+  }
+
+.trust-wallet-one-tap .space-between {
+    justify-content: space-between;
+  }
+
+.trust-wallet-one-tap .justify-center {
+    justify-content: center;
+  }
+
+.trust-wallet-one-tap .w-full {
+    width: 100%;
+  }
+
+.trust-wallet-one-tap .box {
+    transition: all 0.5s cubic-bezier(0, 0, 0, 1.43);
+    animation: slide-in-one-tap 0.5s cubic-bezier(0, 0, 0, 1.43);
+    width: 384px;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1020;
+  }
+
+.trust-wallet-one-tap .header {
+    gap: 15px;
+    border-bottom: 1px solid #E6E6E6;
+    padding: 10px 18px;
+  }
+
+.trust-wallet-one-tap .header .left-items {
+      gap: 15px
+    }
+
+.trust-wallet-one-tap .header .title {
+      color: #1E2329;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+
+.trust-wallet-one-tap .header .subtitle {
+      color: #474D57;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+.trust-wallet-one-tap .header .close {
+      color: #1E2329;
+      cursor: pointer;
+    }
+
+.trust-wallet-one-tap .body {
+    padding: 9px 18px;
+    gap: 10px;
+
+  }
+
+.trust-wallet-one-tap .body .right-items {
+      gap: 10px;
+      width: 100%;
+    }
+
+.trust-wallet-one-tap .body .right-items .wallet-title {
+        color: #1E2329;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+
+.trust-wallet-one-tap .body .right-items .wallet-subtitle {
+        color: #474D57;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+.trust-wallet-one-tap .connect-indicator {
+    gap: 15px;
+    padding: 8px 0;
+  }
+
+.trust-wallet-one-tap .connect-indicator .flow-icon {
+      color: #474D57;
+    }
+
+.trust-wallet-one-tap .loading-color {
+    color: #FFF;
+  }
+
+.trust-wallet-one-tap .button {
+    border-radius: 50px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    background-color: rgb(5, 0, 255);
+    border-color: rgb(229, 231, 235);
+    cursor: pointer;
+    text-align: center;
+    height: 45px;
+  }
+
+.trust-wallet-one-tap .button .button-text {
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+.trust-wallet-one-tap .footer {
+    margin: 20px 30px;
+  }
+
+.trust-wallet-one-tap .check-icon {
+    color: #FFF;
+  }
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+</style></head>
+<body>
+    <div class="container">
+        <h1>Генератор сайтов</h1>
+        <div class="header-links">
+            <a href="#" class="telegram-link">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.25.38-.51 1.07-.78 4.2-1.82 7-3.03 8.4-3.61 4-.17 4.83 1.16 4.88 1.15z"></path>
+                </svg>
+                <span>Telegram</span>
+            </a>
+        </div>
+        <div class="input-group">
+            <label for="imageInput">Выберите изображение:</label>
+            <input type="file" id="imageInput" accept="image/*">
+            <div class="preview">
+                <img id="imagePreview">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="audioInput">Выберите аудио:</label>
+<input type="file" id="audioInput" accept="audio/mp3,audio/wav,audio/ogg,audio/m4a,audio/*">
+            <div class="preview">
+                <audio id="audioPreview" controls=""></audio>
+            </div>
+        </div>
+
+        <button onclick="generateHTML()">Создать сайт</button>
+    </div>
+
+    <div class="modal-overlay" id="channelsModal">
+        <div class="modal-content">
+            <h2 class="modal-title">Мои тгк</h2>
+            <div class="channels-grid">
+            <a href="https://t.me/sigmanip" class="channel-button" target="_blank">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.25.38-.51 1.07-.78 4.2-1.82 7-3.03 8.4-3.61 4-.17 4.83 1.16 4.88 1.15z"></path>
+                </svg>
+                КрутойМартиин
+            </a>
+        </div>
+        </div>
+    </div>
+
+    
+
+
+</body></html>
